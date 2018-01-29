@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Junk.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Common.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Resources">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Basics">
+      <FileRef
+         location = "group:FlowControl.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Switch.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Loop.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Operators.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Functions.playground">
+      </FileRef>
+      <FileRef
+         location = "group:TargetAction.playground">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Advanced">
+      <FileRef
+         location = "group:ARC.playground">
+      </FileRef>
+      <FileRef
+         location = "group:KeyPaths.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Subscript.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ErrorHandling.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Generics.playground">
+      </FileRef>
+      <FileRef
+         location = "group:FunctionalProgramming.playground">
+      </FileRef>
+      <FileRef
+         location = "group:UserDefault.playground">
+      </FileRef>
+      <FileRef
+         location = "group:CodableJSONParsing.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ThreadingAndGCD.playground">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Samples">
+      <FileRef
+         location = "group:Job.swift">
+      </FileRef>
+      <FileRef
+         location = "group:GitHubServiceManager.swift">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "UI">
+      <FileRef
+         location = "group:Fonts.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Segues.playground">
+      </FileRef>
+      <FileRef
+         location = "group:NavBars.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ScrollViews.playground">
+      </FileRef>
+      <FileRef
+         location = "group:TableViews.playground">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Blueprints">
+      <FileRef
+         location = "group:AccessControl.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Protocols.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Extensions.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Structs.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Enums.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Classes.playground">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "DataTypes">
+      <FileRef
+         location = "group:TypeAlias.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Optionals.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Closures.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Sets.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Arrays.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Dictionarys.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Dates.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Numbers.playground">
+      </FileRef>
+      <FileRef
+         location = "group:String.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Tuples.playground">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Patterns">
+      <FileRef
+         location = "group:/Users/marty/Documents/Xcode/SwiftPlaygroundWorkspace/Builder.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Singletons.playground">
+      </FileRef>
+   </Group>
+</Workspace>
