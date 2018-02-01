@@ -5,6 +5,12 @@ import UIKit
 //*** Structs pass by value and classes pass by reference
 //*** Array and Dictionary are STRUCTS and pass by VALUE, so a COPY is passed
 //*** Structs are 10k to 1M times faster than classes!
+
+// Structures are value types. By default, the properties of a value type cannot be modified from within its instance methods.
+// However, you can optionally allow such modification to occur by declaring the instance methods as ‘mutating’; e.g.:
+
+
+
 class HumanClass {
     var name: String
     init(name: String) {    // THIS CODE IS NEEDED IN THE CLASS (Would not be required for a struct)
@@ -34,6 +40,56 @@ var humanStructObjectThree = humanStructObjectOne // THREE is also a COPY of ONE
 humanStructObjectThree.name = "Bobby"
 print(humanStructObjectOne.name)                  // Original is unmodified (still Bob)
 
+public enum Rank: Int {
+    case ace = 1  // set the initial value to ONE instead of the default of ZERO
+    case two, three, four, five, six, seven, eight, nine, ten
+    case jack, queen, king
+    
+    func simpleDescription() -> String {
+        switch self {
+        case .ace:
+            return "ace"
+        case .jack:
+            return "jack"
+        case .queen:
+            return "queen"
+        case .king:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+
+public enum Suit: Int {
+    case spades, hearts, diamonds, clubs
+    
+    func simpleDescription() -> String {
+        switch self {
+        case .spades:
+            return "spades"
+        case .clubs:
+            return "clubs"
+        case .hearts:
+            return "hearts"
+        case .diamonds:
+            return "diamonds"
+        }
+    }
+    
+    func color() -> String{
+        switch self {
+        case .spades:
+            return "black"
+        case .clubs:
+            return "black"
+        case .hearts:
+            return "red"
+        case .diamonds:
+            return "red"
+        }
+    }
+}
 
 
 struct Card {

@@ -62,6 +62,9 @@ print(collection)
 
 // ------------ Generic Protocols
 // protocols can be used to meet Generic conditions
+
+// Protocols can have an associatedtype : A placeholder for the actual type, which is defined by the implementation (like a generic)
+
 func describe<T:ExampleProtocol>(_ input:T){
     input.simpleDescription
 }

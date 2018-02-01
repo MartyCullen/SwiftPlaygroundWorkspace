@@ -1,0 +1,16 @@
+http://five.agency/solving-the-binding-problem-with-swift/
+https://medium.com/flawless-app-stories/how-to-use-a-model-view-viewmodel-architecture-for-ios-46963c67be1b
+
+MVVM Designed by Microsoft
+Model
+   - API, Persistence, Just like MVC
+View Model
+   - interface between the View and the Model
+   - Formats data from model and supplies it to the UI in an easy to use fashion
+   - Responds to model changes and updates the UI
+   - Responds to UI input and handles getting it to the Model
+View
+   - UIView, UIViewController (thinned out)
+   - On other platorms would use data binding, but not available on iOS
+   - Use closures and generics to replace binding
+   - Other alternatives are KVO, or reactive

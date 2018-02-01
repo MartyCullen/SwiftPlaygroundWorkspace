@@ -36,6 +36,9 @@
       location = "container:"
       name = "Advanced">
       <FileRef
+         location = "group:Notifications.playground">
+      </FileRef>
+      <FileRef
          location = "group:ARC.playground">
       </FileRef>
       <FileRef
@@ -118,6 +121,9 @@
       location = "container:"
       name = "DataTypes">
       <FileRef
+         location = "group:Any-AnyObject.playground">
+      </FileRef>
+      <FileRef
          location = "group:TypeAlias.playground">
       </FileRef>
       <FileRef
@@ -156,6 +162,12 @@
       </FileRef>
       <FileRef
          location = "group:Singletons.playground">
+      </FileRef>
+      <FileRef
+         location = "group:MVVMResources">
+      </FileRef>
+      <FileRef
+         location = "group:VIPER Resources">
       </FileRef>
    </Group>
 </Workspace>

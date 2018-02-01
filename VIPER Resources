@@ -1,0 +1,31 @@
+https://github.com/mutualmobile/VIPER-SWIFT    (Holy crap this is alot to digest)
+https://medium.com/yay-its-erica/intro-to-the-viper-design-pattern-swift-3-32e3574dee02
+https://medium.com/@Pr0Ger/why-viper-is-a-bad-choice-for-your-next-application-725f4e16fbee
+https://github.com/strongself/The-Book-of-VIPER/blob/master/english/introduction-to-viper.md
+
+
+View
+   - UIView, etc
+Interactor
+   - Business Logic
+Presenter
+   - UIKit independent Mediator
+Entity
+   - Model
+Router
+   - Wireframe
+   - Navigation Implementation
+   - Navigation not explicit in other 2 major architectures
+
+
+                   + ------------ +
+                   |    Router    +
+                   + ------------ +
+
++ ------------ +   + ------------ +   + ------------ +
+|    View      +   |  Presenter   +   |  Interactor  +
++ ------------ +   + ------------ +   + ------------ +
+
+                                      + ------------ +
+                                      |   Entity     +
+                                      + ------------ +

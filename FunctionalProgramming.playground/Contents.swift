@@ -2,6 +2,9 @@
 
 import UIKit
 
+// http://swiftdoc.org/v3.0/protocol/Sequence/
+
+
 // ------------------ Filter
 // Use a FILTER on a collection to pare down te results using a closure
 let answer = [true, false, true, false, false, false, false]
