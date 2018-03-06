@@ -99,6 +99,9 @@ var colorToUse = userDefinedColor ?? defaultColor
 
 
 // GUARD
+
+// Note: WHERE is no longer valid on a GUARD
+
 func divide(dividend: Double?, by divisor: Double?) -> Double? {
     if dividend == .none {  // Could be worse - nested IFs
         return .none
