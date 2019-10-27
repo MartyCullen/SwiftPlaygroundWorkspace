@@ -49,6 +49,12 @@ let serialQueue = DispatchQueue(label: "serial.martycullen.com") // No attribute
 concurrentQueue.async(execute:{ performCalculation(iterations: 1000, tag: "Async1")})
 
 
+// Most common usage is to force an action on main if it is GUI related
+DispatchQueue.main.async {
+    //self.tableView.reloadData()
+}
+
+
 
 
 

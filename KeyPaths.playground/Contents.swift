@@ -2,8 +2,11 @@
 
 import UIKit
 
-// Keypaths added in Swift 4
-
+// Keypaths added in Swift 4 to allow more dynamic access like we had in ObjC
+// Key paths essentially let us reference any instance property as a separate value.
+// As such, they can be passed around, used in expressions, and enable a piece of code
+//   to get or set a property without actually knowing which exact property its working with.
+// https://www.swiftbysundell.com/articles/the-power-of-key-paths-in-swift/
 
 struct Developer {
     var platform: Platform

@@ -2,6 +2,15 @@
 
 import UIKit
 
+// So we have a server response handler like this that can deal with the success or failure types
+switch success {
+case let .result(sunrise, sunset):
+    print("Sunrise is at \(sunrise) and sunset is at \(sunset)")
+case let .failure(message):
+    print("Failure... \(message)")
+}
+
+
 // Enums get much of their behavior from STRUCTs
 
 // Can you define an enumeration with raw values like this? Why?
@@ -195,9 +204,9 @@ enum Wearable {
 }
 
 let myArmor = Wearable.item(name: "Plate Mail", type: .armor, weight: .heavy, material: .steel)
-let myFootwear = Wearable.item(name: "Hat", type: .headgear, weight: .light, material: .cloth)
+let myHeadgear = Wearable.item(name: "Hat", type: .headgear, weight: .light, material: .cloth)
 print(myArmor.getDescription())
-print(myFootwear.getDescription())
+print(myHeadgear.getDescription())
 
 // -------------- Conform to PROTOCOLS
 protocol LifeSpan {
@@ -220,7 +229,7 @@ enum Player: LifeSpan {
     mutating func increaseHeart(by: Int) {
         switch self {
         case .dead:
-            self = .alive(currentHeart: by)
+            self = .alive(currentHeart: by) // No longer dead
         case let .alive(numberOfHearts):
             self = .alive(currentHeart: numberOfHearts + by)
         }
@@ -242,7 +251,7 @@ enum Player: LifeSpan {
 }
 
 var state = Player.dead // .dead
-state.increaseHeart(by: 3)  // 1
+state.increaseHeart(by: 1)  // 1 .alive
 state.numberOfHearts // 3
 state.getAttacked(damage: 2)  // 1
 state.getAttacked(damage: 1) // 0, .dead

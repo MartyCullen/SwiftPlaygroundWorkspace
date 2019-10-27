@@ -8,3 +8,4 @@ let key = "Welcome_string"
 preference.set("Hello Playground", forKey: key)
 
 preference.value(forKey: key)
+preference.string(forKey: key) ?? "No Name"

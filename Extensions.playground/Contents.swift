@@ -13,6 +13,7 @@ extension Int: ExampleProtocol {
     // You can only work with the info that is already there
     //var cuteName: String = "Integers are a way to store numbers without a decimal"
     
+    // But we can add some functionality...
     var simpleDescription: String {
         return "The number \(self)"
     }

@@ -30,13 +30,13 @@ struct HumanStruct {
 
 let humanClassObjectOne = HumanClass(name: "Bob")
 let humanClassObjectTwo = humanClassObjectOne  // The two variables now point to the same shared memory space
-humanClassObjectTwo.name = "Bobby"             // We are allowed to mutate a property on an immutable object
+humanClassObjectTwo.name = "Bobby"             // We are allowed to mutate a property on an immutable object (declared with let)
 print(humanClassObjectOne.name) // Now ALSO Bobby
 
 let humanStructObjectOne = HumanStruct(name: "Bob")
 let humanStructObjectTwo = humanStructObjectOne   // TWO is now a COPY of ONE
 // humanStructObjectTwo.name = "Bobby"            // Cant do this like we could with a class, it is IMMUTABLE becuase the STRUCT is
-var humanStructObjectThree = humanStructObjectOne // THREE is also a COPY of ONE
+var humanStructObjectThree = humanStructObjectOne // THREE is also a COPY of ONE, but mutable
 humanStructObjectThree.name = "Bobby"
 print(humanStructObjectOne.name)                  // Original is unmodified (still Bob)
 
@@ -144,19 +144,4 @@ let threeOfSpadesDesc = threeOfSpades.simpleDescription()
 var fullDeck = threeOfSpades.fullDeck()
 
 
-// Most WTF use of an Enum I have ever seen - - how is this an ENUM????????
-enum ServerResponse {
-    case result(String, String)
-    case failure(String)
-}
-
-let success = ServerResponse.result("6:00 am", "8:09 pm")
-let failure = ServerResponse.failure("Out of Cheese")
-
-switch success {
-case let .result(sunrise, sunset):
-    print("Sunrise is at \(sunrise) and sunset is at \(sunset)")
-case let .failure(message):
-    print("Failure... \(message)")
-}
 

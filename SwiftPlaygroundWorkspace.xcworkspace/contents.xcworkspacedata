@@ -158,7 +158,7 @@
       location = "container:"
       name = "Patterns">
       <FileRef
-         location = "group:/Users/marty/Documents/Xcode/SwiftPlaygroundWorkspace/Builder.playground">
+         location = "group:Builder.playground">
       </FileRef>
       <FileRef
          location = "group:Singletons.playground">

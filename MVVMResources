@@ -15,3 +15,5 @@ View
    - On other platorms would use data binding, but not available on iOS
    - Use closures and generics to replace binding
    - Other alternatives are KVO, or reactive
+
+MVP is very similar (without the data binding), where the Presenter is the ViewModel

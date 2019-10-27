@@ -2,10 +2,11 @@
 
 import UIKit
 
-// Access Control
+// Access Control from most restrictive to least
 // Five Levels: private, fileprivate, internal, public, open
 
 // --------------- private
+// Can oly be used inside this type or it's extensions in this file
 // Used in singleton pattern to protect from creating another instance
 // Limiting the scope helps reduce compile time
 
@@ -26,7 +27,7 @@ class Game { // BEGIN SCOPE (for number)
 //Game().number // Error
 Game().score // Good
 
-// Swift prior to 4 did not let you havea access to private within an extension
+// Swift prior to 4 did not let you have access to private within an extension
 class MyStatus {
     private var isHappy = true
 }
@@ -46,15 +47,16 @@ class Human {
 }
 
 let bob = Human(enterName: "Bob Lee")
-//bob.name = "Bobby" // Error
+//bob.name = "Bobby" // Error because we can not directly change the private name
 
 
 // ------------- fileprivate
-// Indicates that the class (etc) is only visible inside the enclosing file
+// Indicates that the type/class (etc) is only visible inside the enclosing file
+// even if it is outside the type
 
 
 // ------------- internal
-// The default access for everything else is INTERNAL - - Available throughout the "module"
+// The DEFAULT access for everything else is INTERNAL - - Available throughout the "module"
 // (For example, UIKit, etc are seperate modules and need to be included"
 
 
@@ -68,4 +70,5 @@ let bob = Human(enterName: "Bob Lee")
 // Allows you to subclass it
 // UIViewController is an OPEN class
 // ViewDidLoad is an OPEN func
-
+// Marking a class as open explicitly indicates that you’ve considered the impact of code from other modules using that class as a superclass,
+//   and that you’ve designed your class’s code accordingly.
