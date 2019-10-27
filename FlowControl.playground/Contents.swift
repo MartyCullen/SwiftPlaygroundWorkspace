@@ -33,10 +33,10 @@ simpleDefer()
 // The DEALLOC must be done for ALL EXIT conditions, now you only have to write it ONCE
 // And it is written IMMEDIATELY FOLLOWING the alloc, so you do not have to search for it
 func allocMemory(){
-    let dataSize = 64
-    let destData = UnsafeMutablePointer<UInt8>.allocate(capacity: dataSize)
+    let dataSize = Int(NI_MAXHOST)
+    let destData = UnsafeMutablePointer<Int8>.allocate(capacity: dataSize)
     defer {
-        destData.deallocate(capacity: dataSize)
+        destData.deallocate()
     }
     
     if false {

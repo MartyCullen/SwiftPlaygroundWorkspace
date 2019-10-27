@@ -21,7 +21,7 @@ class Apartment {
 }
 
 // ---------  Delegate pattern
-protocol SendDataDelegate: class {}   // Note: must be based on CLASS (not useful for structs
+protocol SendDataDelegate: class {}   // Note: must be based on CLASS (not useful for structs)
 
 class SendingVC {
     weak var delegate: SendDataDelegate? // Note: WEAK OPTIONAL to break retian cyle (circular reference)

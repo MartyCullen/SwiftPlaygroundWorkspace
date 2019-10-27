@@ -14,6 +14,8 @@ greet("John", on:"Wednesday")
 func callStats(numbers: Int...) -> (min: Int, max: Int, sum: Int) {
     return (1, 2, 3)
 }
+let result = callStats(numbers: 7)
+print("Minimum: \(result.min)")
 
 // Can pass a function as a parameter (closures)
 func greetAll(people: [String], process: (String, String) -> String){

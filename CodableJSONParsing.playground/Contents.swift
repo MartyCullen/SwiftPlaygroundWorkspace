@@ -299,7 +299,7 @@ do {
     
     
     let string = String(data: myBlog, encoding: .utf8)
-    print(string)
+    print(string ?? "NO STRING")
 } catch(let error) {
     print(error)
 }
@@ -327,7 +327,7 @@ extension User2: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: UserCodingKeys.self)
         let name: String = try container.decode(String.self, forKey: .name)
-        let citizenship: String = try container.decode(String.self, forKey: .citizenship)
+        // let citizenship: String = try container.decode(String.self, forKey: .citizenship)  // Commented out because it is not used
         let id: Int = try container.decode(Int.self, forKey: .id)
         self.init(name: name, citizenship: "Republic of Korea", id: id)
     }

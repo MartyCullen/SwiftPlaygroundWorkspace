@@ -9,6 +9,7 @@ View Model
    - Formats data from model and supplies it to the UI in an easy to use fashion
    - Responds to model changes and updates the UI
    - Responds to UI input and handles getting it to the Model
+   - Typically data-bound to the View
 View
    - UIView, UIViewController (thinned out)
    - On other platorms would use data binding, but not available on iOS

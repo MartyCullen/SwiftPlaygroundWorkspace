@@ -5,7 +5,7 @@ import UIKit
 // http://swiftdoc.org/v3.0/protocol/Sequence/
 
 
-// ------------------ Filter
+print("------------------ Filter")
 // Use a FILTER on a collection to pare down te results using a closure
 let answer = [true, false, true, false, false, false, false]
 // Use the built in filter mechanism on collections by passing in a closure forhow to process
@@ -25,7 +25,7 @@ extension Array {
     }
 }
 
-// ------------------ Map
+print("------------------ Map")
 // Use a MAP on a collection to take an action on each element using a closure
 print(Array(1...5).map { $0 * $0 })
 // or you could build your own
@@ -47,13 +47,13 @@ func genericMap<T, U>(_ items: [T], _ operation: (T) -> U) -> [U] {
     return result
 }
 
-// ------------------ Flat Map
+print("------------------ Compact Map (Formerly Flat Map DEPRECATED)")
 // Like map, but culls out NILs
-print([1,2,3,4,5,nil, nil].flatMap { $0 })
-print(["1", "two", "3"].flatMap { Int($0) })
+print([1,2,3,4,5,nil, nil].compactMap { $0 })
+print(["1", "two", "3"].compactMap { Int($0) })
 
 
-// ------------------ Reduce
+print("------------------ Reduce")
 // Use a REDUCE on a collection when you want to calculate a value based on each of the elements, like Sum, Count, Min, etc
 // The zero is the seed, and just means what number to start at
 print(Array(1...10).reduce(0) { $0 + $1 })
@@ -72,19 +72,19 @@ extension Array {
     }
 }
 
-// ------------------ Sorted
-// Arrangea collection using the closure
+print("------------------ Sorted")
+// Arrange a collection using the closure
 print([3, 1, 5, 6, 2, 4].sorted { $1 > $0 })
 
-// ------------------ forEach
+print("------------------ forEach")
 // Run the closure for each element of the collection
 print(["Error", "Created", "Crashed"].forEach { print($0) })
 
-// ------------------ grouping
+print("------------------ grouping")
 // Use a GROUPING on a collection to break it up into a dictionary created based on the closure passed in
 let contacts = ["Julia", "Susan", "John", "Alice", "Alex", "", nil]
 print(contacts)
-let noNils = contacts.flatMap { $0 }
+let noNils = contacts.compactMap { $0 }
 print(noNils)
 let noBlanks = noNils.filter { !$0.isEmpty }
 print(noBlanks)
@@ -92,7 +92,7 @@ let grouped = Dictionary(grouping: noBlanks, by: { $0.first! }) // OK with the B
 print(grouped)
 
 
-// ------------------ grouping
+print("------------------ grouping")
 // Creates a new dictionary from the key-value pairs in the given sequence, using a combining closure to determine the value for any duplicate keys.
 // I THINK what it is doing is returnint the first pair it finds with a unique key
 // So the first pair that had an "a" fora key, had a value of 1
@@ -103,7 +103,7 @@ let duplicates = [("a", 1), ("b", 7), ("a", 3), ("b", 4)]
 let myLetter = Dictionary(duplicates, uniquingKeysWith: { (letter, number) in letter })
 myLetter // ["b": 7, "a": 1]
 
-// ------------------ zip
+print("------------------ zip")
 // for-in-zip runs a loop that selects one element from each collection
 // Looks like the ZIP part generates a sequence of tuples created by the 2 input collections
 let words = ["one", "two", "three", "four"]
@@ -118,7 +118,7 @@ let friends = ["Hoy", "Dan", "Huy"]
 let friendsWithValue = Dictionary(uniqueKeysWithValues: zip(1..., friends)) // the numbers collection is limited by the friends size automagically
 
 
-// ------------------ Filter and Map on Dictionaries
+print("------------------ Filter and Map on Dictionaries")
 let dictionary = ["name": "Bob", "age": "15", "hairColor": "Black"]
 
 let filtered = dictionary.filter {

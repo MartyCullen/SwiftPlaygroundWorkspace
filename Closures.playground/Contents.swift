@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+//: Closures
 
 import UIKit
 
@@ -6,7 +6,7 @@ import UIKit
 var numbers = [20, 19, 7, 12]
 let mappedNumbers = numbers.map({
     (number: Int) -> Int in
-    let result = 3*number
+    let result = 3 * number
     return result
 })
 print(mappedNumbers)
@@ -27,7 +27,7 @@ let reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in      
 })
 
 
-//If you are a jackass and want the least number of characters in your code you can take a statement that makes sense and make it harder to read as shown
+// If you are a jackass and want the least number of characters in your code you can take a statement that makes sense and make it harder to read as shown
 // Define the method signature of our closure
 var combine: (String, String) -> String
 
@@ -62,7 +62,7 @@ sortedAnimals = animals.sorted { (one, two) -> Bool in return one < two }
 sortedAnimals = animals.sorted { (one, two) in return one < two }
 sortedAnimals = animals.sorted { return $0 < $1 }
 sortedAnimals = animals.sorted { $0 < $1 }
-sortedAnimals = animals.sorted() // This only works for srings because of func <(lhs: String, rhs: String) -> Bool
+sortedAnimals = animals.sorted() // This only works for strings because of func <(lhs: String, rhs: String) -> Bool
 
 // -------------  @ESCAPING
 // If a closure is passed as an argument to a function and it is invoked after the function returns, the closure is escaping.
@@ -70,6 +70,7 @@ sortedAnimals = animals.sorted() // This only works for srings because of func <
 // Swift 3 changed to make non-escaping default, so we must declare ours as escaping
 // Because non-escaping is default, optimizations can be done and you dont need a weak copy of self
 // We expect that completion handler to be executed after completion of the function
+// (Previously escaping was default and prevented optimization because no one bothered to mark non-escaping code)
 import HealthKit
 
 class HealthKitManager: NSObject {
@@ -118,7 +119,7 @@ func funcWithNetworkingClosure(closure: @escaping () -> Void) {
     }
 }
 
-// -----------   Capture list
+print("-----------   Capture list")
 // Closures are a REFERENCE type (as opposed to a VALUE type)
 // By default a closure will use tha value of a variable found at execution time
 // you can change this by "capturing" the values
@@ -144,7 +145,7 @@ let anotherCapturedClosure: () -> () = { [captured = c] in
     print("captured \(captured)")
 }
 
-// -------------  Traiiling Closures
+print("-------------  Traiiling Closures")
 // Can be used if there is a SINGLE closure block at the END
 
 // We have a function that takes and int and a closure (closure has no input or output)
@@ -171,7 +172,7 @@ trailingClosure(number: 100, closure: helloClosure)
 trailingClosure(number: 100, closure: { print("Hello!!!") })
 trailingClosure(number: 100) { print("Hello!!!!!") }  // This is the trailing closure - - NOTE: look at the closing peren and removal of "closure:"
 
-// -------------  AUTO Closures
+print("-------------  AUTO Closures")
 func checkIDCard(hasCard: () -> Bool) {
     if hasCard() {
         print("You've an ID")
@@ -212,7 +213,7 @@ extension Dictionary where Value == Any {
     }
 }
 
-// -------------  LAZY VAR Closures
+print("-------------  LAZY VAR Closures")
 // closures created as a lazy var are NON-ESCAPING, so can access self without creating a retain cycle
 class BobGreet {
     var name = "Bob the Developer"
@@ -226,6 +227,6 @@ class BobGreet {
 }
 
 var bobGreet: BobGreet? = BobGreet()
-bobGreet?.greeting
+print(bobGreet?.greeting ?? "NO GREETING")
 bobGreet = nil
 

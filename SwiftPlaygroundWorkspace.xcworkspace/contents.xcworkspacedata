@@ -8,7 +8,7 @@
       location = "group:Common.swift">
    </FileRef>
    <FileRef
-      location = "group:Resources">
+      location = "group:Swift Resources">
    </FileRef>
    <Group
       location = "container:"
